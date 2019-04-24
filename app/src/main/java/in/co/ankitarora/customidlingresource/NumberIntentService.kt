@@ -10,7 +10,7 @@ class NumberIntentService : IntentService("NumberIntentService") {
         sleep(10000)
         val outputValue = input?.plus(1)
         val outputIntent = Intent("output")
-        outputIntent.putExtra("output", input)
+        outputIntent.putExtra("output", outputValue)
         sendBroadcast(outputIntent)
     }
 
